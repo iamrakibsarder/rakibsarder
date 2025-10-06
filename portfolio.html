@@ -197,19 +197,23 @@
             <!-- Updated filter-list -->
             <ul class="filter-list">
               <li class="filter-item">
-                <button class="active" data-filter-btn>All</button>
+                <button class="active" data-filter-btn data-filter="all">
+                  All
+                </button>
               </li>
               <li class="filter-item">
-                <button data-filter-btn>WordPress Website</button>
+                <button data-filter-btn data-filter="wordpress">
+                  WordPress Website
+                </button>
               </li>
               <li class="filter-item">
-                <button data-filter-btn>Webflow</button>
+                <button data-filter-btn data-filter="webflow">Webflow</button>
               </li>
               <li class="filter-item">
-                <button data-filter-btn>Shopify</button>
+                <button data-filter-btn data-filter="shopify">Shopify</button>
               </li>
               <li class="filter-item">
-                <button data-filter-btn>Wix</button>
+                <button data-filter-btn data-filter="wix">Wix</button>
               </li>
             </ul>
 
@@ -229,19 +233,25 @@
               <!-- Updated select-list -->
               <ul class="select-list">
                 <li class="select-item">
-                  <button data-select-item>All</button>
+                  <button data-select-item data-filter="all">All</button>
                 </li>
                 <li class="select-item">
-                  <button data-select-item>WordPress Website</button>
+                  <button data-select-item data-filter="wordpress">
+                    WordPress Website
+                  </button>
                 </li>
                 <li class="select-item">
-                  <button data-select-item>Webflow</button>
+                  <button data-select-item data-filter="webflow">
+                    Webflow
+                  </button>
                 </li>
                 <li class="select-item">
-                  <button data-select-item>Shopify</button>
+                  <button data-select-item data-filter="shopify">
+                    Shopify
+                  </button>
                 </li>
                 <li class="select-item">
-                  <button data-select-item>Wix</button>
+                  <button data-select-item data-filter="wix">Wix</button>
                 </li>
               </ul>
             </div>
@@ -251,7 +261,7 @@
               <li
                 class="project-item active"
                 data-filter-item
-                data-category="wordpress website"
+                data-category="wordpress"
               >
                 <a href="https://luxtreme.net/">
                   <figure class="project-img">
@@ -272,7 +282,7 @@
               <li
                 class="project-item active"
                 data-filter-item
-                data-category="wordpress website"
+                data-category="wordpress"
               >
                 <a href="https://outwestlegal.com.au/">
                   <figure class="project-img">
@@ -293,7 +303,7 @@
               <li
                 class="project-item active"
                 data-filter-item
-                data-category="wordpress website"
+                data-category="wordpress"
               >
                 <a href="http://tangmedia.tv/">
                   <figure class="project-img">
@@ -314,7 +324,7 @@
               <li
                 class="project-item active"
                 data-filter-item
-                data-category="wordpress website"
+                data-category="wordpress"
               >
                 <a href="https://www.universalfitnessgroup.com.au/">
                   <figure class="project-img">
@@ -335,7 +345,7 @@
               <li
                 class="project-item active"
                 data-filter-item
-                data-category="wordpress website"
+                data-category="wordpress"
               >
                 <a href="https://hunger4more.com/">
                   <figure class="project-img">
@@ -356,7 +366,7 @@
               <li
                 class="project-item active"
                 data-filter-item
-                data-category="wordpress website"
+                data-category="wordpress"
               >
                 <a href="https://thesmilespace.com.au/">
                   <figure class="project-img">
@@ -377,7 +387,7 @@
               <li
                 class="project-item active"
                 data-filter-item
-                data-category="wordpress website"
+                data-category="wordpress"
               >
                 <a href="https://aesthetik.com.au/">
                   <figure class="project-img">
@@ -398,7 +408,7 @@
               <li
                 class="project-item active"
                 data-filter-item
-                data-category="wordpress website"
+                data-category="wordpress"
               >
                 <a href="https://www.takingsteps.com.au/">
                   <figure class="project-img">
@@ -855,6 +865,115 @@
     - custom js link
   -->
     <script src="./assets/js/script.js"></script>
+
+    <!-- Portfolio hash URL functionality -->
+    <script>
+      // Portfolio hash URL functionality
+      function updateUrlHash(category) {
+        // Update URL without triggering page reload
+        const newUrl = window.location.pathname + "#" + category;
+        window.history.pushState(null, "", newUrl);
+      }
+
+      function filterPortfolioFromHash() {
+        const hash = window.location.hash.substring(1); // Remove the # symbol
+        const validCategories = [
+          "all",
+          "wordpress",
+          "webflow",
+          "shopify",
+          "wix",
+        ];
+
+        // Default to 'all' if hash is empty or invalid
+        const category = validCategories.includes(hash) ? hash : "all";
+
+        // Apply the filter
+        filterPortfolioByCategory(category);
+
+        // Update active states
+        updateActiveFilterButton(category);
+      }
+
+      function filterPortfolioByCategory(category) {
+        const filterItems = document.querySelectorAll("[data-filter-item]");
+
+        filterItems.forEach((item) => {
+          if (category === "all") {
+            item.classList.add("active");
+          } else if (category === item.dataset.category) {
+            item.classList.add("active");
+          } else {
+            item.classList.remove("active");
+          }
+        });
+      }
+
+      function updateActiveFilterButton(category) {
+        const filterButtons = document.querySelectorAll("[data-filter-btn]");
+        const selectItems = document.querySelectorAll("[data-select-item]");
+        const selectValue = document.querySelector("[data-selecct-value]");
+
+        // Update main filter buttons
+        filterButtons.forEach((btn) => {
+          if (btn.dataset.filter === category) {
+            btn.classList.add("active");
+            if (selectValue) {
+              selectValue.textContent = btn.textContent;
+            }
+          } else {
+            btn.classList.remove("active");
+          }
+        });
+      }
+
+      // Override the existing filter functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize from URL hash on page load
+        filterPortfolioFromHash();
+
+        // Handle filter button clicks
+        const filterButtons = document.querySelectorAll("[data-filter-btn]");
+        filterButtons.forEach((btn) => {
+          btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            const category = this.dataset.filter;
+            updateUrlHash(category);
+            filterPortfolioByCategory(category);
+            updateActiveFilterButton(category);
+          });
+        });
+
+        // Handle dropdown select items
+        const selectItems = document.querySelectorAll("[data-select-item]");
+        const select = document.querySelector("[data-select]");
+
+        selectItems.forEach((item) => {
+          item.addEventListener("click", function (e) {
+            e.preventDefault();
+            const category = this.dataset.filter;
+            updateUrlHash(category);
+            filterPortfolioByCategory(category);
+            updateActiveFilterButton(category);
+
+            // Close dropdown
+            if (select) {
+              select.classList.remove("active");
+            }
+          });
+        });
+
+        // Handle browser back/forward buttons
+        window.addEventListener("popstate", function () {
+          filterPortfolioFromHash();
+        });
+
+        // Handle direct URL access with hash
+        if (window.location.hash) {
+          filterPortfolioFromHash();
+        }
+      });
+    </script>
 
     <!--
     - ionicon link

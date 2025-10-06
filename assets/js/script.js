@@ -80,15 +80,19 @@ const filterFunc = function (selectedValue) {
   }
 };
 
-// Portfolio filtering functionality (only if elements exist)
-if (select) {
+// Portfolio filtering functionality (only if elements exist and no hash filtering is implemented)
+// Check if we have hash-based filtering by looking for data-filter attributes
+const hasHashFiltering =
+  document.querySelector("[data-filter-btn][data-filter]") !== null;
+
+if (select && !hasHashFiltering) {
   select.addEventListener("click", function () {
     elementToggleFunc(this);
   });
 }
 
-// add event in all select items (only if they exist)
-if (selectItems.length > 0 && selectValue) {
+// add event in all select items (only if they exist and no hash filtering)
+if (selectItems.length > 0 && selectValue && !hasHashFiltering) {
   for (let i = 0; i < selectItems.length; i++) {
     selectItems[i].addEventListener("click", function () {
       let selectedValue = this.innerText.toLowerCase();
@@ -99,8 +103,8 @@ if (selectItems.length > 0 && selectValue) {
   }
 }
 
-// add event in all filter button items for large screen (only if they exist)
-if (filterBtn.length > 0) {
+// add event in all filter button items for large screen (only if they exist and no hash filtering)
+if (filterBtn.length > 0 && !hasHashFiltering) {
   let lastClickedBtn = filterBtn[0];
 
   for (let i = 0; i < filterBtn.length; i++) {
