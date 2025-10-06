@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rakib Sarder | Resume</title>
+
+    <!--
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/avatar-1.png"
+      type="image/x-icon"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--
+    - #MAIN
+  -->
+
+    <main>
+      <!--
+      - #SIDEBAR
+    -->
+
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img
+              src="./assets/images/rakibsarder.jpg"
+              alt="Rakib Sarder"
+              width="80"
+            />
+          </figure>
+
+          <div class="info-content">
+            <h1 class="name" title="Richard hanrick">Md Rakib Sarder</h1>
+
+            <p class="title">Webflow and Wordpress developer</p>
+          </div>
+
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+
+                <a href="mailto:rakibsarder555@gmail.com" class="contact-link"
+                  >rakibsarder555@gmail.com</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+
+                <a href="tel:+8801819685176" class="contact-link"
+                  >+8801819685176</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Birthday</p>
+
+                <time datetime="1982-06-23">July 18, 2000</time>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+
+                <address>North Badda, Dhaka, Bangladesh</address>
+              </div>
+            </li>
+          </ul>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+            <li class="social-item">
+              <a
+                href="https://www.facebook.com/iamrakibsarder"
+                class="social-link"
+              >
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="https://x.com/iamrakibsarder" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a
+                href="https://www.instagram.com/iamrakibsarder"
+                class="social-link"
+              >
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--
+      - #main-content
+    -->
+
+      <div class="main-content">
+        <!--
+        - #NAVBAR
+      -->
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="index.html" class="navbar-link">About</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="resume.html" class="navbar-link active">Resume</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="portfolio.html" class="navbar-link">Portfolio</a>
+            </li>
+
+            <!-- <li class="navbar-item">
+              <a href="blog.html" class="navbar-link">Blog</a>
+            </li> -->
+
+            <li class="navbar-item">
+              <a href="contact.html" class="navbar-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!--
+        - #RESUME
+      -->
+
+        <article class="resume active" data-page="resume">
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+
+            <!-- Download Resume Button -->
+            <div style="text-align: right; margin-bottom: 20px">
+              <a
+                href="./assets/resume/MD_Rakib_Sarder.pdf"
+                download="MD_Rakib_Sarder.pdf"
+                class="download-btn"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 8px;
+                  background: var(--orange-yellow-crayola);
+                  color: var(--smoky-black);
+                  padding: 12px 24px;
+                  border-radius: 14px;
+                  text-decoration: none;
+                  font-weight: 500;
+                  transition: var(--transition-1);
+                  box-shadow: var(--shadow-3);
+                "
+              >
+                <ion-icon
+                  name="download-outline"
+                  style="font-size: 18px"
+                ></ion-icon>
+                Download Resume
+              </a>
+            </div>
+          </header>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+              <h3 class="h3">Education</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Green University of Bangladesh
+                </h4>
+                <span>2022 - Present</span>
+                <p class="timeline-text">
+                  Currently pursuing a Bachelor's degree in Computer Science and
+                  Engineering (CSE).
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Govt. Science College</h4>
+                <span>2017 - 2019</span>
+                <p class="timeline-text">
+                  Completed Higher Secondary Education (HSC) in Science with a
+                  focus on Mathematics and Physics.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  LEDP - Web Design and Development
+                </h4>
+                <span>2020</span>
+                <p class="timeline-text">
+                  Completed a specialized course in Web Design and Development,
+                  focusing on front-end and back-end technologies.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <section class="timeline">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+              <h3 class="h3">Experience</h3>
+            </div>
+
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Web Designer - Upwork</h4>
+                <span>2024 — Present</span>
+                <p class="timeline-text">
+                  I have been working on Upwork for the past year, completing
+                  multiple web design projects using Webflow and WordPress for
+                  various clients. My focus has been on delivering high-quality,
+                  user-friendly websites tailored to client needs.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Web Designer - Fiverr</h4>
+                <span>2022 — 2024</span>
+                <p class="timeline-text">
+                  Over the course of two years, I successfully completed 150+
+                  orders on Fiverr, collaborating with over 60 unique clients.
+                  My work ranged from custom website designs to full redesigns,
+                  ensuring client satisfaction with every project.
+                </p>
+              </li>
+
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Web Designer - Local Projects
+                </h4>
+                <span>2022 — Present</span>
+                <p class="timeline-text">
+                  In addition to freelancing on global platforms, I have worked
+                  on numerous local projects for individual clients, offering
+                  tailored web design services to meet specific business needs.
+                </p>
+              </li>
+            </ol>
+          </section>
+
+          <!-- Language -->
+
+          <section class="languages">
+            <div class="title-wrapper lang-box">
+              <div class="icon-box">
+                <ion-icon name="code-slash-outline"></ion-icon>
+              </div>
+              <h3 class="h3">Languages</h3>
+            </div>
+
+            <ul class="languages-list">
+              <li class="language-card">HTML</li>
+              <li class="language-card">CSS</li>
+              <li class="language-card">JavaScript</li>
+              <li class="language-card">ReactJs</li>
+              <li class="language-card">PHP</li>
+              <li class="language-card">MySQL</li>
+              <li class="language-card">C</li>
+              <li class="language-card">C++</li>
+              <li class="language-card">Java</li>
+              <li class="language-card">Python</li>
+            </ul>
+          </section>
+
+          <!-- Skills -->
+
+          <section class="skill">
+            <h3 class="h3 skills-title">My skills</h3>
+
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Wordpress Web Design</h5>
+                  <data value="95">95%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 95%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Webflow Development</h5>
+                  <data value="90">90%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">Wix and Shopify</h5>
+                  <data value="80">80%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%"></div>
+                </div>
+              </li>
+
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h5 class="h5">JavaScript</h5>
+                  <data value="90">90%</data>
+                </div>
+
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <!--
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

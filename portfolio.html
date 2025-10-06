@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rakib Sarder | Portfolio</title>
+
+    <!--
+    - favicon
+  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/avatar-1.png"
+      type="image/x-icon"
+    />
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!--
+    - #MAIN
+  -->
+
+    <main>
+      <!--
+      - #SIDEBAR
+    -->
+
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img
+              src="./assets/images/rakibsarder.jpg"
+              alt="Rakib Sarder"
+              width="80"
+            />
+          </figure>
+
+          <div class="info-content">
+            <h1 class="name" title="Richard hanrick">Md Rakib Sarder</h1>
+
+            <p class="title">Webflow and Wordpress developer</p>
+          </div>
+
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
+
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
+
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
+
+                <a href="mailto:rakibsarder555@gmail.com" class="contact-link"
+                  >rakibsarder555@gmail.com</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
+
+                <a href="tel:+8801819685176" class="contact-link"
+                  >+8801819685176</a
+                >
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Birthday</p>
+
+                <time datetime="1982-06-23">July 18, 2000</time>
+              </div>
+            </li>
+
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
+
+                <address>North Badda, Dhaka, Bangladesh</address>
+              </div>
+            </li>
+          </ul>
+
+          <div class="separator"></div>
+
+          <ul class="social-list">
+            <li class="social-item">
+              <a
+                href="https://www.facebook.com/iamrakibsarder"
+                class="social-link"
+              >
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a href="https://x.com/iamrakibsarder" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a
+                href="https://www.instagram.com/iamrakibsarder"
+                class="social-link"
+              >
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!--
+      - #main-content
+    -->
+
+      <div class="main-content">
+        <!--
+        - #NAVBAR
+      -->
+
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="index.html" class="navbar-link">About</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="resume.html" class="navbar-link">Resume</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="portfolio.html" class="navbar-link active">Portfolio</a>
+            </li>
+
+            <!-- <li class="navbar-item">
+              <a href="blog.html" class="navbar-link">Blog</a>
+            </li> -->
+
+            <li class="navbar-item">
+              <a href="contact.html" class="navbar-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!--
+        - #PORTFOLIO
+      -->
+
+        <article class="portfolio active" data-page="portfolio">
+          <header>
+            <h2 class="h2 article-title">Portfolio</h2>
+          </header>
+
+          <section class="projects">
+            <!-- Updated filter-list -->
+            <ul class="filter-list">
+              <li class="filter-item">
+                <button class="active" data-filter-btn>All</button>
+              </li>
+              <li class="filter-item">
+                <button data-filter-btn>WordPress Website</button>
+              </li>
+              <li class="filter-item">
+                <button data-filter-btn>Webflow</button>
+              </li>
+              <li class="filter-item">
+                <button data-filter-btn>Shopify</button>
+              </li>
+              <li class="filter-item">
+                <button data-filter-btn>Wix</button>
+              </li>
+            </ul>
+
+            <div class="filter-select-box">
+              <button class="filter-select" data-select>
+                <div class="select-value" data-selecct-value>
+                  Select category
+                </div>
+
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+              </button>
+
+              <!-- Dropdown Filter -->
+
+              <!-- Updated select-list -->
+              <ul class="select-list">
+                <li class="select-item">
+                  <button data-select-item>All</button>
+                </li>
+                <li class="select-item">
+                  <button data-select-item>WordPress Website</button>
+                </li>
+                <li class="select-item">
+                  <button data-select-item>Webflow</button>
+                </li>
+                <li class="select-item">
+                  <button data-select-item>Shopify</button>
+                </li>
+                <li class="select-item">
+                  <button data-select-item>Wix</button>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="project-list">
+              <!-- WordPress Website Projects -->
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="wordpress website"
+              >
+                <a href="https://luxtreme.net/">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/luxtreme-min.png"
+                      alt="Luxtreme"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Luxtreme</h3>
+                  <p class="project-category">WordPress Website</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="wordpress website"
+              >
+                <a href="https://outwestlegal.com.au/">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/outwest-min.png"
+                      alt="Outwest Legal"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Outwest Legal</h3>
+                  <p class="project-category">WordPress Website</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="wordpress website"
+              >
+                <a href="http://tangmedia.tv/">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/tang-media-min.png"
+                      alt="Tang Media"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Tang Media</h3>
+                  <p class="project-category">WordPress Website</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="wordpress website"
+              >
+                <a href="https://www.universalfitnessgroup.com.au/">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/universal-fitness-min.png"
+                      alt="Universal Fitness"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Universal Fitness</h3>
+                  <p class="project-category">WordPress Website</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="wordpress website"
+              >
+                <a href="https://hunger4more.com/">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/hunger4more.png"
+                      alt="Hunger4More"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Hunger4More</h3>
+                  <p class="project-category">WordPress Website</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="wordpress website"
+              >
+                <a href="https://thesmilespace.com.au/">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/smile-space.png"
+                      alt="Smile Space"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">The Smile Space</h3>
+                  <p class="project-category">WordPress Website</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="wordpress website"
+              >
+                <a href="https://aesthetik.com.au/">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/aesthetik-dental.png"
+                      alt="Aesthetik Dental"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Aesthetik Dental</h3>
+                  <p class="project-category">WordPress Website</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="wordpress website"
+              >
+                <a href="https://www.takingsteps.com.au/">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/taking-steps.png"
+                      alt="Talking Steps"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Talking Steps</h3>
+                  <p class="project-category">WordPress Website</p>
+                </a>
+              </li>
+
+              <!-- Webflow Projects -->
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="webflow"
+              >
+                <a href="https://www.trendfeed.co.uk/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/webflow1-min.png"
+                      alt="TrendFeed"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">TrendFeed</h3>
+                  <p class="project-category">Webflow</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="webflow"
+              >
+                <a href="https://www.districtmedia.com.au/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/webflow2-min.png"
+                      alt="District Media"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">District Media</h3>
+                  <p class="project-category">Webflow</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="webflow"
+              >
+                <a href="https://www.takemore.photos/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/webflow3-min.png"
+                      alt="TakeMore Photos"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">TakeMore Photos</h3>
+                  <p class="project-category">Webflow</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="webflow"
+              >
+                <a href="https://www.moveramaphilly.com/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/webflow4-min.png"
+                      alt="Moverama Philly"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Moverama Philly</h3>
+                  <p class="project-category">Webflow</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="webflow"
+              >
+                <a href="https://www.youramazonpro.com/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/webflow5-min.png"
+                      alt="Your Amazon Pro"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Your Amazon Pro</h3>
+                  <p class="project-category">Webflow</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="webflow"
+              >
+                <a href="https://www.emailbountyhunter.com/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/webflow6-min.png"
+                      alt="Email Bounty Hunter"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Email Bounty Hunter</h3>
+                  <p class="project-category">Webflow</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="webflow"
+              >
+                <a href="https://www.scaleupcreative.co/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/webflow7-min.png"
+                      alt="Scaleup Creative"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Scaleup Creative</h3>
+                  <p class="project-category">Webflow</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="webflow"
+              >
+                <a href="https://aquaperm.co.za/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/webflow8-min.png"
+                      alt="Aquaperm"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Aquaperm</h3>
+                  <p class="project-category">Webflow</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="webflow"
+              >
+                <a href="https://adsplash.co/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/webflow9-min.png"
+                      alt="AdSplash"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">AdSplash</h3>
+                  <p class="project-category">Webflow</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="webflow"
+              >
+                <a href="https://www.cleanbooks.ai/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/webflow10-min.png"
+                      alt="Clean Books AI"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Clean Books AI</h3>
+                  <p class="project-category">Webflow</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="webflow"
+              >
+                <a href="https://www.aircaretechusa.com/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/Air-Care.png"
+                      alt="Air Care"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Air Care</h3>
+                  <p class="project-category">Webflow</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="webflow"
+              >
+                <a href="https://www.thesecondsociety.org/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/thesecondsociety.png"
+                      alt="The Second Society"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">The Second Society</h3>
+                  <p class="project-category">Webflow</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="webflow"
+              >
+                <a
+                  href="https://duwes-ultra-awesome-site.webflow.io/"
+                  target="_blank"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/Syncd.png"
+                      alt="Try Syncd"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Try Syncd</h3>
+                  <p class="project-category">Webflow</p>
+                </a>
+              </li>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="webflow"
+              >
+                <a href="https://www.revenuelabz.com/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/reveneu-labz.png"
+                      alt="Reveneu Labz"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Reveneu Labz</h3>
+                  <p class="project-category">Webflow</p>
+                </a>
+              </li>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="webflow"
+              >
+                <a
+                  href="https://jackies-exceptional-site-3ed80d.webflow.io/"
+                  target="_blank"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/startok.png"
+                      alt="StartOk"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">StartOk</h3>
+                  <p class="project-category">Webflow</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="webflow"
+              >
+                <a href="https://seen-2c0d75.webflow.io/" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/seen.png"
+                      alt="Seen"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Seen</h3>
+                  <p class="project-category">Webflow</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="webflow"
+              >
+                <a
+                  href="https://battle-of-the-couples.webflow.io/"
+                  target="_blank"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/Couples-battle.png"
+                      alt="Couples-battle"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Couples Battle</h3>
+                  <p class="project-category">Webflow</p>
+                </a>
+              </li>
+
+              <!-- Shopify Projects -->
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="shopify"
+              >
+                <a href="https://district518.com.au/">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/shopify1-min.png"
+                      alt="District 518"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">District 518</h3>
+                  <p class="project-category">Shopify</p>
+                </a>
+              </li>
+
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="shopify"
+              >
+                <a href="https://www.facebook.com/brutalbuddhagear/">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/shopify2-min.png"
+                      alt="Brutal Buddha"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Brutal Buddha</h3>
+                  <p class="project-category">Shopify</p>
+                </a>
+              </li>
+
+              <!-- Wix Project -->
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="wix"
+              >
+                <a href="https://www.entelprojects.com.au/">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/entel-wix-min.png"
+                      alt="Entel Projects"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Entel Projects</h3>
+                  <p class="project-category">Wix</p>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <!--
+    - custom js link
+  -->
+    <script src="./assets/js/script.js"></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
